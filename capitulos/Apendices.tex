@@ -1,0 +1,155 @@
+\chapterstyle{apendices}
+
+% ----------------------------------------------------------
+\chapter{Derivação do Vetor de Médias}
+% ----------------------------------------------------------
+
+
+Seja o \(VAR(1)\) bivariado representado em sua forma reduzida:
+
+\begin{equation}
+X_t = A_0 + A_1X_{t-1} + e_t, 
+\end{equation}
+
+ou em notação matricial: 
+
+\begin{equation}
+\label{eq:var_reduz_matrix}
+\begin{aligned} \begin{bmatrix}
+z_t \\ y_t \end{bmatrix} &=\begin{bmatrix}
+a_{10} \\ a_{20}\end{bmatrix} +
+\begin{bmatrix}a_{11} & a_{12} \\a_{21} & a_{22}
+\end{bmatrix}\begin{bmatrix} z_{t-1} \\ y_{t-1}
+\end{bmatrix}  +\begin{bmatrix} e_{1t} \\ e_{2t}
+\end{bmatrix}\end{aligned}
+\end{equation}
+
+Se
+
+\begin{equation}
+\left\{ 
+\begin{array}{l}
+
+\begin{bmatrix}e_{1t} \\e_{2t}
+\end{bmatrix}\equiv B^{-1}\varepsilon_t =\begin{bmatrix}
+\frac{\varepsilon_{zt} - b_{12} \varepsilon_{yt}}{1 - b_{12}b_{21}} \\[5pt]\frac{\varepsilon_{yt} - b_{21} \varepsilon_{zt}}{1 - b_{12}b_{21}}\end{bmatrix}
+\\
+\varepsilon_{zt} \sim \mathcal{RB}(0, \sigma^2_z) 
+
+\end{array} 
+\right.
+\end{equation}
+
+Então:
+\begin{equation} \mathbb{E}(e_t) = \textbf{0} \end{equation}
+
+Se, sob estacionariedade, para uma variável qualquer:
+
+\begin{equation}
+ \mathbb{E} \left( x_t \right) = \mathbb{E} \left( x_{t-1} \right) = \mu, \, \forall \, t \in \mathbb{Z} = \{0, \pm1, \pm2, ...\}
+\end{equation}
+
+Então, similarmente para \(z_t\) e \(y_t\), tem-se que os valores das séries flutuam em torno de suas médias de modo que \(\mathbb{E} \left( y_t \right) = \mathbb{E} \left( y_{t-1} \right) = \bar{y}\) e \(\mathbb{E} \left( z_t \right) = \mathbb{E} \left( z_{t-1} \right) = \bar{z}\).
+ 
+Aplicando-se o operador de expectância sobre ambos os termos da equação \eqref{eq:var_reduz_matrix}, tem-se: 
+
+\begin{equation}
+\label{eq:expect_var}
+\mathbb{E} \begin{bmatrix}z_t \\y_t\end{bmatrix} 
+= 
+\mathbb{E}\begin{bmatrix}a_{10} \\ a_{20}\end{bmatrix} 
++
+\mathbb{E}\begin{bmatrix}
+a_{11} & a_{12}\\a_{21} & a_{22}
+\end{bmatrix}
+\begin{bmatrix}z_{t-1} \\ y_{t-1}\end{bmatrix}
++
+\mathbb{E}\begin{bmatrix}e_{1t} \\ e_{2t}\end{bmatrix}
+\end{equation}
+
+Uma vez que: 
+
+\begin{equation}
+\left\{ 
+\begin{array}{l}
+\mathbb{E} \begin{bmatrix}z_t \\y_t\end{bmatrix} 
+= 
+\begin{bmatrix}\mathbb{E}(y_t) \\\mathbb{E}(z_t)
+\end{bmatrix} 
+=
+\begin{bmatrix}\bar{y} \\\bar{z}\end{bmatrix}
+\\[15pt]
+\mathbb{E} \begin{bmatrix}a_{10} \\a_{20}\end{bmatrix}
+=
+\begin{bmatrix}a_{10} \\a_{20}\end{bmatrix}
+\\[15pt]
+\mathbb{E}\begin{bmatrix}
+a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix}
+\begin{bmatrix}z_{t-1} \\ y_{t-1}\end{bmatrix}
+=
+\begin{bmatrix}
+a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix}
+\mathbb{E}\begin{bmatrix}z_{t-1} \\ y_{t-1}\end{bmatrix}
+\\[15pt]
+=
+\begin{bmatrix}
+a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix}
+\begin{bmatrix} \mathbb{E}(z_{t-1})
+\\ \mathbb{E}(y_{t-1})\end{bmatrix}
+~~ = 
+\begin{bmatrix}
+a_{11} & a_{12}\\a_{21} & a_{22}\end{bmatrix}
+\begin{bmatrix}\bar{y} \\\bar{z}\end{bmatrix}
+\end{array} 
+\right.
+\end{equation}
+
+Então a equação  \eqref{eq:expect_var} pode ser reescrita da seguinte maneira:
+
+\begin{equation}
+\begin{bmatrix}
+\bar{z} \\\bar{y}
+\end{bmatrix}=
+\begin{bmatrix}a_{10} \\a_{20}\end{bmatrix}
++\begin{bmatrix}a_{11} & a_{12} \\ a_{21} & a_{22}
+\end{bmatrix}\begin{bmatrix}\bar{z} \\\bar{y}
+\end{bmatrix}\end{equation}
+
+De onde os valores de longo prazo da série podem ser encontrados mediante resolução do sistema linear:
+
+\begin{equation}\begin{bmatrix}
+\bar{z} \\\bar{y}
+\end{bmatrix}-\begin{bmatrix}
+a_{11} & a_{12} \\a_{21} & a_{22}
+\end{bmatrix}\begin{bmatrix}\bar{z} \\\bar{y}
+\end{bmatrix}=\begin{bmatrix}a_{10} \\a_{20}
+\end{bmatrix}\end{equation}
+
+\begin{equation}\left(\begin{bmatrix}1 & 0 \\0 & 1
+\end{bmatrix}-\begin{bmatrix}
+a_{11} & a_{12} \\a_{21} & a_{22}
+\end{bmatrix}\right)\begin{bmatrix}
+\bar{z} \\\bar{y}\end{bmatrix}
+=\begin{bmatrix}a_{10} \\a_{20}
+\end{bmatrix}\end{equation}
+
+\begin{equation}
+\underbrace{
+\begin{bmatrix}\bar{z} \\\bar{y}
+\end{bmatrix}
+}_{\equiv \bar{X}}
+=
+\left(
+\underbrace{
+\begin{bmatrix}1 & 0 \\0 & 1\end{bmatrix}
+}_{\equiv I}
+-
+\underbrace{
+\begin{bmatrix}a_{11} & a_{12} 
+\\a_{21} & a_{22}\end{bmatrix}
+}_{\equiv A_1}
+\right)^{-1}
+\underbrace{
+\begin{bmatrix}a_{10} \\a_{20}\end{bmatrix}
+}_{\equiv A_0}
+\end{equation}

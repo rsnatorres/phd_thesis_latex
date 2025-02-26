@@ -1,0 +1,128 @@
+\chapterstyle{texto}
+\chapter{Projeto de Qualificação} \label{projeto}
+% ----------------------------------------------------------
+
+\section{Introdução}
+
+
+O Dicionário Brasileiro da Língua Portuguesa \textit{Michaelis} define a palavra \enquote{Convenção} como \enquote{Acordo, ajuste ou combinação sobre determinado assunto [...]}\footnote{https://michaelis.uol.com.br/moderno-portugues/busca/portugues-brasileiro/conven\%C3\%A7\%C3\%A3o/}. O Dicionário de \textit{Cambridge} para a Língua Inglesa define \enquote{\textit{Convention}} como \enquote{\textit{a usual or accepted way of behaving [...] often following an old way of thinking or a custom [...]}}\footnote{https://dictionary.cambridge.org/pt/dicionario/ingles/convention}. Ambas as definições antecipam parcialmente o significado que o termo irá assumir ao longo deste trabalho: uma crença compartilhada entre os indivíduos sobre o estado da economia. 
+
+Essa acepção está atrelada ao arcabouço teórico pós-keynesiano, no qual o conceito de convenção é resgatado da \textit{Teoria Geral} para compor o quadro dos elementos que guiam o comportamento dos agentes econômicos em um ambiente de incerteza fundamental \textcite{carvalho_keynes_2020}. A pedra angular dessa teoria, como se verá, é a incerteza fundamental quanto ao futuro. Se se admite que o futuro pode não repetir o passado - no que se refere às propriedades estatísticas das séries de dados (média, variância, autocorrelação, dentre outras) - então o conhecimento probabilístico não pode ser obtido para servir como guia de conduta para a tomada de decisões. Os agentes se voltam então a estratégias defensivas como forma de atenuar o problema da incerteza. No plano institucional, os contratos a termo se destacam enquanto uma forma de impor uma rigidez ao futuro, enquanto trazem previsibilidade para o presente. No plano cognitivo, são as convenções que estruturam as regras de pensamento e comportamento dos agentes, possibilitando alguma forma de coordenação em um ambiente incerto \parencite{abramo_cidade_2007, erber_as_2011, carvalho_keynes_2020, dequech_conventions_2022}.
+
+
+
+A temática das convenções, contudo, não ocupou lugar de destaque entre os pós-keynesianos. Poucos títulos de trabalhos, seções ou capítulos carregam o termo. Apenas para \enquote{\textit{some schollars}} a noção de convenção ocupa um lugar central na teoria de Keynes \parencite[p. 145]{dequech_conventions_2022}. É possível que isso se deva ao fato de que o próprio Keynes, ao oferecer o conceito de comportamento convencional no capítulo 12 da \textit{Teoria Geral}, estava mais interessado em extrair seus efeitos do que explorar o conceito em si \parencite[p. 238]{carvalho_keynes_2020}. Uma teoria das convenções permaneceu assim, em aberto, ofuscada por outros conceitos que, no plano cognitivo-comportamental dos agentes ante a incerteza, carregaram maior atenção: a preferência pela liquidez, o comportamento de manada e o \enquote{\textit{animal spirit}}\footnote{Embora o comportamento de manada possa ter como base uma convenção, a literatura costuma enfatizar a ausência de ‘expectativas racionais’ nesse comportamento e seu potencial para amplificar as oscilações das variáveis econômicas, sem, contudo, debater o conceito de convenção e seu papel para o comportamento de manada}.
+
+Este trabalho procura resgatar a noção de convenção em Keynes e entre os pós-keynesianos, conferindo-a tratamento empírico. Busca-se debater a capacidade do conceito de contribuir para a discussão moderna de política monetária, na qual a comunicação entre bancos centrais e mercado tem sido alçada à posição de instrumento próprio de política monetária \parencite{blinder_central_2008}. A convenção no plano teórico e a comunicação no plano empírico compõem as duas dimensões do problema que se busca analisar neste trabalho.  
+
+A seguinte passagem, extraída da \textit{Teoria Geral}, apresenta o ponto de partida desta pesquisa.  
+
+\begin{quote}
+\footnotesize % Diminui o tamanho da letra
+\setlength{\leftskip}{2cm} 
+\enquote{A taxa de juros de longo prazo dependerá não apenas da política corrente da autoridade monetária, mas também das \textbf{expectativas} do mercado no que se refere a sua política futura. A autoridade monetária controla com facilidade a taxa de juros de curto prazo ... Mas a taxa de longo prazo pode mostrar-se mais recalcitrante quando cai a um nível que, com base na experiência passada e nas expectativas correntes da política monetária futura, a \textbf{opinião abalizada} considera inseguro ... uma política monetária que atinge a \textbf{opinião pública} como sendo de caráter experimental ou facilmente alterável pode falhar [...] A mesma política [...] pode se provar facilmente bem-sucedida se ela aparece à \textbf{opinião pública} como razoável e praticável ... Talvez seja mais exato dizer que a taxa de juros é um fenômeno \textbf{convencional}, ao invés de psicológico, pois o seu valor observado depende sobremaneira do valor futuro que se lhe prevê. Qualquer taxa de juros \textbf{aceita com suficiente convicção} como provavelmente duradoura será duradoura; sujeita, naturalmente, em uma sociedade em mudança, a flutuações, originadas por diversos motivos, em torno do nível normal esperado.} \parencite[p. 203, grifos do autor]{keynes_teoria_1996}
+\end{quote}
+
+Se se pode dizer, conforme a passagem, que a convenção está associada à opinião, seria possível mensurá-la? Seria possível acessar a convenção, relacionando-a com as demais variáveis macroeconômicas, investigando a significância de seu efeito? 
+
+Essas perguntas levaram esta pesquisa a adentrar na área da Linguística Computacional, onde foi possível aplicar o ferramental metodológico capaz de extrair as opiniões e sentimentos dos indivíduos por meio de fontes textuais. Esse ferramental tem sido extensivamente utilizado para com dados de redes sociais em anos recentes \parencite{carosia_analyzing_2020, garcia_topic_2021, de_melo_comparing_2021, de_carvalho_mining_2022}. Estes espaços virtuais, amplamente difundidos entre a população, servem como meio de se posicionar politicamente, culturalmente e economicamente. A importância das redes sociais enquanto \textit{locus} de obtenção de informação pelos agentes econômicos tem sido destacado por alguns estudos \parencite{carosia_analyzing_2020, paiva_essays_2022}. Em geral, dias em que os serviços de redes sociais foram interrompidos levaram a queda na quantidade de investidores e no volume negociado \parencite{paiva_essays_2022}.
+
+Escolheu-se a rede social X (anteriormente \textit{Twitter}), como fonte primária de informação, por ser uma rede social com predomínio da linguagem textual.
+A base de dados foi obtida através de um algoritmo de mineração de dados (\textit{webscraping}) construído na linguagem de programação \textit{Python} pelo autor do presente projeto. Ao todo, foram coletadas 55.129.584 postagens em português com temáticas econômicas realizadas entre 2008 e 2022. Destas, 5.066.044 se referem à política monetária.
+
+Este trabalho procura explorar esses dados textuais de forma a extrair um indicador de sentimento a respeito da política monetária. Busca-se investigar a capacidade de esse indicador representar a convenção sobre a política monetária, ou seja, o posicionamento entre os agentes sobre os rumos adotados pela autoridade monetária. Resgatando as definições acima, seria o indicador uma medida do nível de \enquote{acordo} ou de \enquote{combinação} entre agentes de mercado e Banco Central a respeito da política monetária?
+
+O passo seguinte à construção do indicador é sua utilização em modelos de séries temporais de forma a testar sua significância ante à outras variáveis macroeconômicas. Nesse sentido, modelos do tipo VAR tem sido a principal opção metodológica empregada pela literatura \parencite{bloom_impact_2009, lucca_measuring_2009, haddow_macroeconomic_2013, baker_measuring_2016, nyman_news_2021}. Em comum, todos estes trabalhos constroem índices de sentimento com base em informações textuais (noticiários, redes sociais, comunicados dos bancos centrais) e averíguam seu impacto em variáveis macroeconômicas, particularmente os juros de longo prazo. 
+
+É este o empreendimento deste trabalho. Parte-se da teoria pós-keynesiana, em especial da noção de convenção, para esboçar uma estrutura teórica de formação das taxas de juros no longo prazo. Investiga-se a literatura que trabalha de forma empírica o papel da comunicação do Banco Central na política monetária. Adentra-se na área da Linguística Computacional como forma de transformar um dado textual em uma informação numérica (indicador), passível de ser utilizado em modelagens quantitativas. Posteriormente, esse indicador é utilizado em modelos de séries temporais, tais como modelos VAR e \textit{Local Projections}, para investigar sua relação com variáveis macroeconômicas, em especial as taxas de juros de longo prazo, por carregarem um elevado componente \enquote{convencional} em sua determinação. 
+
+\clearpage
+
+
+
+\section{Justificativa}
+
+O papel da convenção dentro do arcabouço teórico pós-keynesiano é tema controverso. O ponto de atrito entre os autores está na possibilidade de o conceito ser utilizado fora do âmbito do mercado financeiro, onde foi explicitamente empregado por Keynes \parencite{dequech_conventions_2022}. A questão central é se o conceito poderia ser estendido do mercado financeiro, da compra de ativos líquidos, para o mercado de bens, especificamente, os bens de capital, por sua vez ilíquidos, contribuindo, assim, para a teoria de determinação do investimento. Segundo \textcite{dequech_conventions_2022}, entre os autores que advogam pela restrição do conceito estão \textcite{possas_racionalidade_2016} e \textcite{carvalho_keynes_2020}. Entre os que apelam para seu uso mais generalizado, influenciando inclusive o investimento, estão \textcite{odonnell_keynes_1991}, \textcite{meeks_keynes_2003}, \textcite{dow_keynes_2013}.  
+
+Segundo \textcite[p. 160]{carvalho_keynes_2020}, o conceito de convenção não embasa uma teoria das expectativas de longo prazo e, portanto, não pode servir como elemento definidor do investimento em bens de capital fixo. Nesse sentido, o comportamento convencional, tal como esboçado por 
+\textcite{keynes_general_1937, keynes_teoria_1996}, estaria restrito às expectativas de curto prazo, particularmente aquelas relacionadas ao mercado financeiro, podendo ser útil para investigar o comportamento de preços de ações, por exemplo
+\footnote{Não obstante, \textcite[Cap. 5]{keynes_teoria_1996} também trata de expectativas de curto prazo não embasadas pelo comportamento convencional, ligadas ao processo de produção. Conforme \textcite{carvalho_expectativas_2014}, para Keynes, as expectativas associadas à produção são de curto prazo e adaptativas.}.
+
+Neste momento, é conveniente esclarecer o mecanismo pelo qual as convenções poderiam afetar algumas variáveis econômicas, em particular as taxas de juros e o nível de investimento. 
+
+Na teorização pós-keynesiana, as decisões de investimento ocorrem em um ambiente permeado pela incerteza fundamental. Essa incerteza se diferencia do risco probabilístico porque o agente não consegue alcançar uma distribuição de probabilidade que seja única, aditiva e confiável sobre um evento futuro, uma vez que informações necessárias tal só serão reveladas no futuro \parencite{dequech_uncertainty_2011}. Isto é, as informações seriam sempre incompletas no momento da tomada de decisão, impedindo o cálculo atuarial. Diante desse cenário, os agentes econômicos adotam certos comportamentos defensivos ante a incerteza, tal como a preferência pela liquidez e a adoção de contratos a termo. Esses comportamentos atenuam o problema da incerteza, mas não o eliminam. Os investimentos ainda podem falhar. Perdas irreversíveis podem ocorrer. Ainda assim, mesmo neste cenário sombrio sob o qual pairam os investimentos sob a incerteza, constata-se que o processo de acumulação capitalista é inegável. Então, pode-se dizer que a força da ação empreendedora ante o incerto é maior do que a força paralisadora da incerteza. 
+
+O que sustenta essa força de ação empreendedora? Na esfera do indivíduo, poder-se-ia dizer que este é dotado de um \enquote{espírito animal}, ávido pelo lucro monetário e pela acumulação \parencite{abramo_cidade_2007}. Mas a força apenas da iniciativa individual do empresário capitalista é limitada ante o destino incerto. Muitos empresários tomam decisões de produção e investimento simultaneamente, não existindo uma coordenação prévia dos planos de produção - este é um dos princípios de uma economia monetária de produção, segundo \textcite{carvalho_keynes_2020}. O futuro com o qual os empresários poderão avaliar suas decisões de investimento e produção será o produto de todas essas decisões simultâneas e conjuntas. Eis que a convenção surge, na esfera coletiva, como uma possibilidade de coordenação entre os agentes \parencite{abramo_cidade_2007, carvalho_expectativas_2014}. 
+
+Sendo essencialmente uma crença compartilhada, a convenção aponta o que a coletividade pode esperar do futuro. Empreendendo ações em torno de um futuro \enquote{acordado}, a convenção carrega em si um caráter profético, assemelhando-se às expectativas autorrealizáveis. O sucesso da materialização da convenção depende, contudo, de sua adesão pelos agentes. Quanto mais agentes se comportarem esperando uma determinada taxa de juros de longo prazo, ou um determinado nível de investimento, maior a chance daquilo que se espera realizar. 
+
+A convenção não é a única forma possível de coordenação. Keynes destacou sobretudo o papel das instituições e da política econômica do Estado - não obstante, as próprias políticas públicas coordenam as expectativas por meio da sua influência sobre as convenções \parencite{resende_ciclo_2020}. O destaque, entre Keynes e os pós-keynesianos, recai sobre a política fiscal, capaz de reduzir incertezas quanto ao futuro ao sinalizar a estabilização da demanda agregada via políticas anticíclicas. Este compromisso do Estado ante ao futuro poderia gerar informações passíveis de serem utilizadas nos cálculos empresariais \textcite[p. 157]{carvalho_keynes_2020}. Contudo, ressalta-se, as instituições e a política econômica são instrumentos de coordenação não mercantis, enquanto a convenção emerge de um acordo tácito no âmbito empresarial \parencite[p. 162-164]{abramo_cidade_2007}.
+
+Uma manifestação concreta da interação entre a coordenação não mercantil, fundamentada na ação do Estado, e a coordenação promovida pela convenção entre os agentes econômicos é o fenômeno da determinação das taxas de juros de longo prazo. Tal como referido na passagem da \textit{Teoria Geral} na introdução deste trabalho, sabe-se que a autoridade monetária controla com facilidade a taxa de juros de curto prazo. A taxa de juros de longo prazo, contudo, depende da expectativa sobre a política monetária futura, o que inclui, por sua vez, um julgamento sobre a política monetária corrente. É assim, no dizer de Keynes, um fenômeno convencional. Só é possível à autoridade monetária influenciar as taxas de juros de longo prazo na direção que ela deseja se sua política for suficientemente convincente entre os agentes, hoje e amanhã. 
+
+Há uma ampla literatura acadêmica dedicada à investigação de como a opinião dos agentes de mercado sobre a política monetária afetam as taxas de juros de longo prazo \parencite{bloom_impact_2009, lucca_measuring_2009, haddow_macroeconomic_2013, baker_measuring_2016, nyman_news_2021}. Nenhum destes trabalhos, contudo, o fazem à luz do paradigma pós-keynesiano. Trata-se, sobretudo, de uma literatura empírica, que tem explorado a capacidade dos métodos advindos do campo da Linguística Computacional para geração de indicadores com potencial preditivo em modelos de séries temporais.  
+
+O objetivo deste trabalho é promover a conexão entre esses dois campos, empregando a noção de convenção como elo de interseção entre discussões aparentemente apartadas. Adicionalmente, procura-se contribuir para a literatura empírica deslocando o foco da análise textual dos comunicados dos bancos centrais e dos noticiários para as redes sociais, que tem se destacado como \textit{locus} de obtenção de informação por parte dos agentes de mercado \parencite{paiva_essays_2022}. Assim, ao invés de focar em como a comunicação de um banco central sobre a política monetária afeta as variáveis macroeconômicas \parencite{lucca_measuring_2009, hansen_shocking_2016, shapiro_taking_2021, gardner_words_2021} - ou em sua obtenção pelos agentes por meio de notícias \parencite{picault_media_2022, de_oliveira_carosia_investment_2021, shapiro_measuring_2020, nyman_news_2021} -  este trabalho foca na validação da política monetária pelos agentes econômicos, expressa por meio das redes sociais. Optou-se pela rede social X (anteriormente Twitter) por ser uma rede social predominantemente textual.  
+
+Uma hipótese fundamental dessa pesquisa é a de que os agentes econômicos expressam suas opiniões sobre a política monetária por meio das redes sociais. Esta hipótese se fundamenta na medida em que foram mineradas 5.066.044 de postagens que versam sobre temas relacionados à política monetária entre 2008 e 2022. Um objetivo específico deste trabalho é a construção de um indicador de sentimento que atue como uma \textit{proxy} da convenção dos agentes de mercado à respeito da política monetária, sendo assim possível unir a literatura teórica pós-keynesiana com a literatura empírica que tem empregado os métodos da Linguística Computacional na área da economia. 
+
+A utilização das postagens em redes sociais em detrimento de publicações em noticiários como instrumento de mensuração da convenção possui uma intenção teórica relevante. Busca-se medir a informação sobre a política monetária, não apenas como ela se apresenta aos agentes (positiva ou negativa), por meio dos comunicados dos bancos centrais e pelos noticiários, mas como ela se propaga e é interpretada pelos agentes. Somente no espaço das redes sociais é possível captar o alcance tomado pelas opiniões e, inclusive, os comunicados e as notícias, uma vez que é possível aos usuários mais que expor, aprovar e compartilhar de demais opiniões. Almeja-se, assim, contribuir com a vertente de literatura que tem focado mais no \textit{perceiving} do mercado sobre a política monetária \parencite{hayo_self-monitoring_2015, picault_media_2022}. 
+
+Este trabalho volta sua atenção ao problema básico da macroeconomia: o da coordenação. Para isso, busca-se situar o conceito de convenção segundo uma perspectiva pós-keynesiana. Essa opção metodológica envolve um afastamento dos modelos de agente representativo, tais como os modelos DSGE (\textit{Dynamic Stochastic General Equilibrium}). Embora esses modelos sejam derivados da tradição do modelo de Ramsey-Cass-Koopmans, eles se fundamentam em agentes representativos, muitas vezes assumindo coordenação perfeita, deslocando o problema da macroeconomia para uma questão de crescimento econômico. 
+
+\clearpage
+
+
+
+\section{Objetivos}
+
+\subsection{Objetivo Geral}
+
+O presente trabalho busca acessar a validação da política monetária pelos agentes de mercado através da rede social X (anteriormente Twitter). Do ponto de vista teórico, esse objetivo se manifesta através da utilização do conceito de convenção, segundo o arcabouço pós-keynesiano, para uma leitura dessa validação. Do ponto de vista empírico, busca-se capturar essa validação por meio da construção de um indicador de sentimento da política monetária. Ao final, busca-se entender se a convenção entre os agentes a respeito dos rumos da política monetária, a ser capturada mediante a expressão de suas opiniões na rede social X, pode afetar as taxas de juros de longo prazo. Em última instância, julga-se a relevância do componente convencional, conforme apontado por Keynes na \textit{Teoria Geral}, para a determinação dessa variável de política monetária. 
+
+
+\subsection{Objetivos Específicos}
+
+
+\bigskip
+\begin{enumerate}
+
+\item Investigação teórica sobre o papel do conceito de convenção dentro do arcabouço pós-keynesiano, em particular sua relação com a política monetária
+\bigskip
+\item Construção de um índice de sentimento sobre a política monetária que possa servir de \textit{proxy} da convenção sobre a política monetária
+\bigskip
+\item Construção de um modelo de séries temporais que incorpore o indicador de convenção de modo a investigar seu potencial enquanto preditor
+
+\end{enumerate}
+
+
+
+
+\clearpage
+\section{Metodologia}
+
+O presente trabalho se desenvolveu sobre a interseção de duas grandes áreas de metodologia científica. A primeira é a Linguística Computacional, que busca prover modelos computacionais para o estudo da linguagem. A segunda é área de Séries Temporais, que investiga as propriedades estatísticas dos processes estocásticos que transcorrem no tempo. Enquanto a primeira fornece o ferramental necessário à extração de dados e a posterior construção de índices de sentimento, a segunda aponta os caminhos para o emprego desses índices em modelagens que os relacionam à outras variáveis econômicas de interesse.
+
+Com relação à primeira área, serão utilizados recursos linguísticos, tais como dicionários de sentimento, juntamente com algoritmos de atribuição de sentimento, para avaliar as emoções dos agentes econômicos na rede social X. O fundamental deste processo é a transformação de um dado não-estruturado (textual) em uma informação numérica, um indicador, que possa ser correlacionado com as demais variáveis macroeconômicas e utilizado em modelagens econométricas.
+
+A segunda área utiliza o indicador construído para investigar seu potencial preditivo e significância em modelagens de séries temporais. O indicador de sentimento, enquanto \textit{proxy}, da convenção dos agentes a respeito da política monetária, será testado em modelos do tipo VAR e \textit{Local Projections}. As variáveis utilizadas, bem como as especificações dos modelos - tais como ordem, estacionarização, transformações, dentre outras - serão adotadas em conformidade com a literatura existente de forma a estabelecer algum diálogo com esses trabalhos, mas sob uma perspectiva pós-keynesiana. 
+
+\clearpage
+\section{Cronograma}
+
+Após a defesa de qualificação, o presente trabalho irá se debruçar sobre os capítulos ainda em aberto para a conclusão do trabalho, haja vista:
+
+\bigskip
+
+\begin{enumerate}
+
+\item \textbf{Out/2024: Capítulo 1 - Referencial Teórico}: Neste capítulo serão apresentados alguns conceitos fundamentais dentro do arcabouço teórico pós-keynesiano, tais como incerteza, preferência pela liquidez, convenção, economia monetária de produção, de forma a abrir espaço para uma discussão fundamentada sobre o papel da convenção enquanto mecanismo de coordenação.
+\bigskip
+\item \textbf{Nov/2024: Capítulo 2 - Revisão de Literatura}: Serão sistematizadas as contribuições, essencialmente empíricas, sobre análise de sentimento. Será abordada tanto a literatura que aplica os métodos da linguística computacional na temática da política monetária, quanto aqueles trabalhos que aplicam tais métodos para outras áreas, mas cujo foco da contribuição é de teor metodológico. 
+\bigskip
+\item \textbf{Nov/2024: Capítulo 4 - Resultados}: Serão apresentados os resultados dos indicadores construídos com cada recurso linguístico utilizado, bem como os resultados dos modelos de séries temporais (VAR e \textit{Local Projections}). 
+\bigskip
+\item \textbf{Dez/2024: Arquivo Final da Tese}: Serão incorporadas as contribuições da banca de qualificação, bem como escritas as considerações finais e a conclusão do trabalho.
+
+
+\end{enumerate}

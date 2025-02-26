@@ -1,0 +1,95 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Esse template foi um fork do 
+% https://github.com/lucasmsoares96/Template-Monografia-CEFET-MG
+% Modificado para atender aos padrões da FACE-UFMG
+% Já está usando as atualizações da abnt de 2023 para as citações
+% Esse documento é dividido em três arquivos tex diferentes: pre_textual.tex, textual.tex e pos_textual.tex
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,12pt,oneside]{memoir}
+\usepackage[utf8]{inputenc}
+\usepackage{FACE}
+\usepackage{lipsum}    % gera texto aleatório (remover)
+% Ramon:
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{adjustbox}
+\usepackage{tabularx}
+\usepackage{caption} % Para usar \captionof
+\usepackage{array}
+\usepackage{float}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{color} % for text color
+\usepackage{colortbl} % for table colors
+\usepackage[table,xcdraw]{xcolor} % for more color options
+\usepackage{soul} % for strikethrough text
+\usepackage{booktabs} % for table rules
+\usepackage{setspace} % for line spacing
+\usepackage{pdflscape} % Pacote para orientação paisagem
+%\usepackage{placeins} % Para \FloatBarrier
+\usepackage{afterpage} % Para controlar a página seguinte
+\usepackage{rotating}
+\usepackage{xurl}
+\interfootnotelinepenalty=10000 % for url to not break across pages
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Incluir o arquivo de bibliografia %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addbibresource{bibliografia.bib}
+
+
+% Configurações do Documento
+\title{O papel das convenções na política monetária:}
+\subtitle{interlocuções entre a teoria pós-keynesiana e avanços recentes da linguística computacional}
+\author{Ramon da Silva Torres}  
+
+\date{2024}
+\location{Belo Horizonte}
+
+
+\advisor{Orientador: Rafael Saulo Marques Ribeiro}
+\coadvisor{Coorientador: Marco Flávio da Cunha Resende}
+
+\committeeone{Membro da Banca 1\\ Título}
+\committeetwo{Membro da Banca 2\\ Título}
+% \committeethree{Título Nome\\ Titulação} Se houver terceiro membro da banca modificar também o arquivo FACE.sty
+
+
+% Lembre de colocar a data real no lugar de "\today" antes de imprimir a folha de aprovação
+\committeedate{\_\_\_\_\_\_\_\_\_\_\_\_}
+
+\institution{
+  Universidade Federal de Minas Gerais
+  \\
+  Faculdade de Ciências Econômicas
+  \\
+  Departamento de Ciências Econômicas
+}
+
+\preamble{Projeto de Qualificação apresentado ao Departamento de Ciências Econômicas da Universidade Federal de Minas Gerais, como requisito parcial à obtenção do título de Doutor em Ciências Econômicas.}
+
+
+\begin{document}
+\selectlanguage{brazil}
+\frontmatter
+\pretextual
+\input{pre_textual}
+
+\mainmatter
+\textual
+\input{capitulos/0_projeto_qualificacao}
+%\input{capitulos/1_cap_referencia_teorico}
+\input{capitulos/1_cap_metodologia}
+\input{capitulos/2_cap_resultados_preliminares}
+
+\input{pos_textual}
+
+
+
+\end{document}
